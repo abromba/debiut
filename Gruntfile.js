@@ -37,7 +37,7 @@ module.exports = function(grunt) {
       },
       options: {
           server: {
-              baseDir: "./"
+              baseDir: "file:///C:/Users/b/Documents/Ania/programowanie/zadania%20domowe/GIT/index.html"
           }
       }
     }
