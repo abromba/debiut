@@ -11,17 +11,17 @@ module.exports = function(grunt) {
           'css/main.css': 'sass/main.sass'
         }
       }
-    }
+    },
     imagemin: {
       dynamic: {
         files: [{
           expand: true,
           cwd: 'images/',
-          src: ['https://images.pexels.com/photos/2988/pattern-triangles.jpg?h=350&auto=compress&cs=tinysrgb.{png,jpg,gif}'],
+          src: ['images/kubas.jpg'],
           dest: 'images/build/'
         }]
       }
-    }
+    },
     watch: {
       scripts: {
         files: ['sass/main.sass'],
@@ -30,12 +30,14 @@ module.exports = function(grunt) {
            spawn: false,
         },
       } 
-    }
+    },
     browserSync: {
       bsFiles: {
-        src : 'css/main.css'
+        src : ['css/main.css', 'index.html']
+
       },
       options: {
+		  watchTask: true,
         server: {
            baseDir: "./"
         }
